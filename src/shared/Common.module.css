@@ -43,17 +43,17 @@
 
 .home_top_action_btn {
 	font-size: 10px;
-	color: blue;
+	color: #144192;
 	font-weight: 600;
 	font-size: 12px;
 	box-shadow: none !important;
-	border: 1.5px solid blue;
+	border: 1.5px solid #144192;
 	border-radius: 6px;
 	margin-left: 8px;
 }
 
 .home_top_action_btn:hover {
-	color: blue !important;
+	color: #144192 !important;
 }
 .home_top_container {
 	margin-top: 12px;
@@ -64,14 +64,14 @@
 }
 .home_top_text {
 	font-size: 12px;
-	color: blue;
+	color: #144192;
 	font-weight: 500;
 }
 .common_form_text_field {
 	width: 100%;
 	border: 1.5px solid lightgray;
 	border-radius: 6px;
-	padding: 4px 12px;
+	padding: 8px 12px;
 	/* margin-bottom: 12px; */
 }
 .home_form_section {
@@ -94,7 +94,7 @@
 	font-size: 12px;
 	box-shadow: none !important;
 	border-radius: 4px;
-	padding: 12px 40px;
+	padding: 12px 50px;
 }
 .common_submit_btn:hover {
 	color: #ffffff !important;

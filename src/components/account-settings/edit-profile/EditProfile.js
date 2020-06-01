@@ -13,7 +13,6 @@ class EditProfile extends Component {
             profileImage: 'https://www.w3schools.com/howto/img_avatar.png',
         }
     }
-
     handleUserInput = (e) => {
         const name = e.target.name;
         const value = e.target.value;
@@ -59,7 +58,6 @@ class EditProfile extends Component {
                             <input className={commonStyles.common_form_text_field} type="text" name="company" value={this.state.company} onChange={this.handleUserInput}></input>
                             <p className={commonStyles.common_form_label}>YOUR DESIGNATION</p>
                             <input className={commonStyles.common_form_text_field} type="text" name="designation" value={this.state.designation} onChange={this.handleUserInput}></input>
-
                             <div className={styles.edit_profile_submit_container}>
                                 <button type="button" className={`btn btn-primary-outline ${commonStyles.common_submit_btn} ${commonStyles.btn_ripple}`}>Save Changes</button>
                             </div>

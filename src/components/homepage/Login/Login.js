@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styles from "./Login.module.css";
 import commonStyles from '../../../shared/Common.module.css';
+import Captcha from '../../../shared/captcha/Captcha'
 
 
 
@@ -14,7 +15,7 @@ class Login extends Component {
   }
 
   handleUserInput = (e) => {
-    
+
     const name = e.target.name;
     const value = e.target.value;
     console.log(name)
@@ -29,7 +30,7 @@ class Login extends Component {
             <div className={commonStyles.home_top_container}>
               <div className={commonStyles.home_top_section}>
                 <span className={commonStyles.home_top_text}>Don't have an account?</span>
-                <button  type="button" className={`btn btn-primary-outline ${commonStyles.home_top_action_btn} ${commonStyles.btn_ripple}`}>
+                <button type="button" className={`btn btn-primary-outline ${commonStyles.home_top_action_btn} ${commonStyles.btn_ripple}`}>
                   GET STARTED
                 </button>
               </div>
@@ -46,7 +47,10 @@ class Login extends Component {
                     <p className={styles.login_form_password_text}>Forgot your password?</p>
                   </div>
                   <input className={commonStyles.common_form_text_field} type="password" name="password" value={this.state.password} onChange={this.handleUserInput}></input>
-                  <div className={commonStyles.common_submit_container}>
+                  <div className={styles.login_form_captcha_container}>
+                    <Captcha></Captcha>
+                  </div>
+                  <div className={styles.login_form_submit_container}>
                     <button type="button" className={`btn btn-primary-outline ${commonStyles.common_submit_btn} ${commonStyles.btn_ripple}`}>
                       SIGN IN
                     </button>

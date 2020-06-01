@@ -1,10 +1,10 @@
 import React from "react";
-import "./HomeLeftSection.css";
+import styles from "./HomeLeftSection.module.css";
 
 const HomeLeftSection = () => {
   return (
     <React.Fragment>
-      <div className="Sidebar">Sidebar</div>
+      <div className={styles.Sidebar}>Sidebar</div>
     </React.Fragment>
   );
 }

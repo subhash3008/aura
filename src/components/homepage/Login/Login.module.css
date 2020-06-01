@@ -12,10 +12,20 @@
 .login_form_password_section{
     display: flex;
     justify-content: space-between;
+    margin-top: 12px;
 }
 .login_form_password_text{
     font-size: 12px;
-    color: blue;
-    margin-bottom: 8px;
+    color: #144192;
+    margin-bottom: 0px;
+    margin-top:14px;
     cursor: pointer;
+    font-weight: 600;
+}
+.login_form_submit_container {
+    text-align: center;
+    margin-top: 40px;
+}
+.login_form_captcha_container{
+    margin:30px 0px ;
 }

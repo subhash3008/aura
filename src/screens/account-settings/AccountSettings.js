@@ -17,7 +17,6 @@ class AccountSettings extends Component {
       email: "",
     }
   }
-
   handleUserInput = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -26,8 +25,6 @@ class AccountSettings extends Component {
   }
 
   render() {
-    console.log('commonStyles : ', commonStyles);
-    console.log('styles : ', styles);
     return (
       <div className={styles.container}>
         <div className={`row ${commonStyles.no_gutter}`}>

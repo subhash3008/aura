@@ -37,7 +37,7 @@ class ForgotPassword extends Component {
                 <form>
                   <p className={commonStyles.common_form_label}>REGISTERED EMAIL ADDRESS</p>
                   <input className={commonStyles.common_form_text_field} type="text" name="email" value={this.state.email} onChange={this.handleUserInput}></input>
-                  <div className={commonStyles.common_submit_container}>
+                  <div className={styles.fp_submit_container}>
                     <button type="button" className={`btn btn-primary-outline ${commonStyles.common_submit_btn} ${commonStyles.btn_ripple}`}>RESET PASSWORD</button>
                   </div>
                 </form>
