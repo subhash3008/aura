@@ -1,0 +1,101 @@
+/*********** Button Styling *************/
+.btn_ripple {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	transition: all ease-in-out 0.5s;
+}
+
+.btn_ripple::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 25%;
+	height: 100%;
+	width: 50%;
+	background-color: #000;
+	border-radius: 50%;
+	opacity: 0;
+	pointer-events: none;
+	transition: all ease-in-out 1s;
+	transform: scale(5, 5);
+}
+
+.btn_ripple:active::after {
+	padding: 0;
+	margin: 0;
+	opacity: 0.2;
+	transition: 0s;
+	transform: scale(0, 0);
+}
+/*********** Button Styling End *************/
+
+.no_gutter {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.no_gutter > [class^="col-"] {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.home_top_action_btn {
+	font-size: 10px;
+	color: blue;
+	font-weight: 600;
+	font-size: 12px;
+	box-shadow: none !important;
+	border: 1.5px solid blue;
+	border-radius: 6px;
+	margin-left: 8px;
+}
+
+.home_top_action_btn:hover {
+	color: blue !important;
+}
+.home_top_container {
+	margin-top: 12px;
+	margin-right: 16px;
+}
+.home_top_section {
+	float: right;
+}
+.home_top_text {
+	font-size: 12px;
+	color: blue;
+	font-weight: 500;
+}
+.common_form_text_field {
+	width: 100%;
+	border: 1.5px solid lightgray;
+	border-radius: 6px;
+	padding: 4px 12px;
+	/* margin-bottom: 12px; */
+}
+.home_form_section {
+	width: 55%;
+}
+.common_form_label {
+	font-size: 0.85em;
+	margin-bottom: 8px;
+	display: inline-block;
+	margin-top: 12px;
+}
+.common_submit_container {
+	text-align: center;
+}
+.common_submit_btn {
+	background-color: #144192;
+	font-size: 10px;
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 12px;
+	box-shadow: none !important;
+	border-radius: 4px;
+	padding: 12px 40px;
+}
+.common_submit_btn:hover {
+	color: #ffffff !important;
+}

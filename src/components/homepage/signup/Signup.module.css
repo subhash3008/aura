@@ -1,0 +1,16 @@
+.signup_form_container{
+    margin-top: 60px;
+    margin-left: 140px;
+}
+.signup_main_text{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.singup_tnc{
+    font-size: 0.8em;
+}
+.signup_checkbox{
+    margin-top: 0.5em;
+    cursor: pointer;
+}

@@ -1,0 +1,28 @@
+.react-tabs__tab--selected {
+    background: #fff;
+    border: none !important;
+    color: black;
+    border-radius: 5px 5px 0 0;
+    box-shadow: none;
+    font-weight: bold;
+    /* border-color: #aaa; */
+
+}
+.react-tabs__tab{
+    bottom: 0px !important;
+}
+
+.react-tabs__tab:focus {
+    box-shadow: none !important;
+    /* border-color: none !important; */
+    outline: none;
+}
+
+.react-tabs__tab-list {
+    padding-bottom: 10px !important;
+    font-size: 12px;
+}
+
+.react-tabs__tab:focus:after{
+    height: 0px !important;
+}

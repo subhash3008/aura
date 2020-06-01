@@ -1,0 +1,26 @@
+.edit_profile_form_section{
+    width: 35%;
+}
+
+.profile_pic{
+    position: relative;
+    cursor: pointer;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+  }  
+  .file_input{
+    display: none;
+  }
+  .profile_pic_section{
+      text-align: center;
+      margin-top: 40px;
+  }
+  .picture_change_text{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .edit_profile_submit_container{
+      text-align: left;
+  }
