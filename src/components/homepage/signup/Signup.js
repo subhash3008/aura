@@ -75,6 +75,19 @@ class Signup extends Component {
     this.setState({ errors, [name]: value });
     this.setState({ formsInvalid: formsInvalid })
   }
+  handleFormSubmit = () => {
+    if (!this.state.formsInvalid) {
+      const paramsObj = {
+        name: this.state.name,
+        email: this.state.email,
+        company: this.state.company,
+        designation: this.state.designation,
+        password: this.state.password
+      };
+      console.log('SIGNUP FORM : ', paramsObj);
+      this.props.onSignup(paramsObj);
+    }
+  }
   render() {
     return (
       <div>
@@ -110,7 +123,7 @@ class Signup extends Component {
                     <Captcha></Captcha>
                   </div>
                   <div className={styles.signup_form_submit_container}>
-                    <button type="button" className={`btn btn-primary-outline ${commonStyles.common_submit_btn} ${commonStyles.btn_ripple}`}>SIGN UP</button>
+                    <button type="button" className={`btn btn-primary-outline ${commonStyles.common_submit_btn} ${commonStyles.btn_ripple}`} onClick={this.handleFormSubmit}>SIGN UP</button>
                   </div>
                 </form>
               </div>

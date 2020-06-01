@@ -1,4 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
+import { homepage } from '../../store/actions';
 
 // import styles from './Homepage.module.css';
 import commonStyles from '../../shared/Common.module.css'
@@ -12,11 +15,11 @@ class Homepage extends React.Component {
   getRightSectionComponent = (pathname) => {
     switch(pathname) {
       case '/signup': 
-        return <Signup />;
+        return <Signup onSignup={this.props.requestSignup} />;
       case '/forgot-password': 
         return <ForgotPassword />;
       default: 
-        return <Login />;
+        return <Login onLogin={this.props.requestLogin} />;
     }
   }
 
@@ -36,4 +39,14 @@ class Homepage extends React.Component {
   }
 }
 
-export default Homepage;
+const mapStateToProps = (state) => {
+  console.log('STATE : ', state);
+  return { homepage: state.homepage };
+}
+
+const mapDispatchToProps = {
+  requestLogin: homepage.requestLogin,
+  requestSignup: homepage.requestSignup
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Homepage);

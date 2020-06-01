@@ -7,16 +7,16 @@ const recaptchaRef = React.createRef();
 const Captcha = () => {
   return (
     <React.Fragment>
-                  <ReCAPTCHA
+      <ReCAPTCHA
         ref={recaptchaRef}
         sitekey="6Le05P4UAAAAALXnEUSMhqTOEdjOgqRIM3EKYguj"
-        // onChange={this.handleCaptcha}
+      // onChange={this.handleCaptcha}
       />
     </React.Fragment>
   );
 
- 
-  
+
+
 }
 
 
