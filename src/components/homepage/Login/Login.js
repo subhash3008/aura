@@ -21,6 +21,13 @@ class Login extends Component {
     this.setState({ [name]: value });
   }
 
+  goToSignup = () => {
+    this.props.history.push('/signup')
+  }
+  goToForgotPassword = () => {
+    this.props.history.push('/forgot-password')
+  }
+
   render() {
     return (
       <div>
@@ -29,7 +36,8 @@ class Login extends Component {
             <div className={commonStyles.home_top_container}>
               <div className={commonStyles.home_top_section}>
                 <span className={commonStyles.home_top_text}>Don't have an account?</span>
-                <button type="button" className={`btn btn-primary-outline ${commonStyles.home_top_action_btn} ${commonStyles.btn_ripple}`}>
+                <button type="button" className={`btn btn-primary-outline ${commonStyles.home_top_action_btn} ${commonStyles.btn_ripple}`}
+                onClick={this.goToSignup}>
                   GET STARTED
                 </button>
               </div>
@@ -43,7 +51,9 @@ class Login extends Component {
                   <input className={commonStyles.common_form_text_field} type="text" name="email" value={this.state.email} onChange={this.handleUserInput}></input>
                   <div className={styles.login_form_password_section}>
                     <p className={commonStyles.common_form_label}>PASSWORD</p>
-                    <p className={styles.login_form_password_text}>Forgot your password?</p>
+                    <p 
+                    className={styles.login_form_password_text}
+                    onClick={this.goToForgotPassword}>Forgot your password?</p>
                   </div>
                   <input className={commonStyles.common_form_text_field} type="password" name="password" value={this.state.password} onChange={this.handleUserInput}></input>
                   <div className={styles.login_form_captcha_container}>

@@ -15,11 +15,11 @@ class Homepage extends React.Component {
   getRightSectionComponent = (pathname) => {
     switch(pathname) {
       case '/signup': 
-        return <Signup onSignup={this.props.requestSignup} />;
+        return <Signup history={this.props.history}  onSignup={this.props.requestSignup} />;
       case '/forgot-password': 
-        return <ForgotPassword />;
+        return <ForgotPassword history={this.props.history} ForgotPassword></ForgotPassword>;
       default: 
-        return <Login onLogin={this.props.requestLogin} />;
+        return <Login history={this.props.history}  onLogin={this.props.requestLogin} />;
     }
   }
 

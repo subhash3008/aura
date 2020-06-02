@@ -16,7 +16,9 @@ class ForgotPassword extends Component {
     const value = e.target.value;
     console.log(name)
     this.setState({ [name]: value });
-
+  }
+  goToSignup = () => {
+    this.props.history.push('/signup')
   }
 
   render() {
@@ -27,7 +29,11 @@ class ForgotPassword extends Component {
             <div className={commonStyles.home_top_container}>
               <div className={commonStyles.home_top_section}>
                 <span className={commonStyles.home_top_text}>  Don't have an account?</span>
-                <button type="button" className={`btn btn-primary-outline ${commonStyles.home_top_action_btn} ${commonStyles.btn_ripple}`}>GET STARTED</button>
+                <button
+                  type="button"
+                  className={`btn btn-primary-outline ${commonStyles.home_top_action_btn} ${commonStyles.btn_ripple}`}
+                  onClick={this.goToSignup}>GET STARTED
+                </button>
               </div>
             </div>
             <div className={styles.fp_form_container}>
@@ -36,9 +42,20 @@ class ForgotPassword extends Component {
               <div className={commonStyles.home_form_section}>
                 <form>
                   <p className={commonStyles.common_form_label}>REGISTERED EMAIL ADDRESS</p>
-                  <input className={commonStyles.common_form_text_field} type="text" name="email" value={this.state.email} onChange={this.handleUserInput}></input>
+                  <input
+                    className={commonStyles.common_form_text_field}
+                    type="text"
+                    name="email"
+                    value={this.state.email}
+                    onChange={this.handleUserInput}>
+
+                  </input>
                   <div className={styles.fp_submit_container}>
-                    <button type="button" className={`btn btn-primary-outline ${commonStyles.common_submit_btn} ${commonStyles.btn_ripple}`}>RESET PASSWORD</button>
+                    <button
+                      type="button"
+                      className={`btn btn-primary-outline ${commonStyles.common_submit_btn} ${commonStyles.btn_ripple}`}
+                    >RESET PASSWORD
+                      </button>
                   </div>
                 </form>
               </div>

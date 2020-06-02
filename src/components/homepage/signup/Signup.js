@@ -3,6 +3,7 @@ import styles from "./Signup.module.css";
 import commonStyles from '../../../shared/Common.module.css';
 import ErrorText from '../../../shared/error-text/ErrorText';
 import Captcha from '../../../shared/captcha/Captcha'
+import SignupSuccess from '../signup-success/SignupSuccess'
 
 const validEmailRegex = new RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
 class Signup extends Component {
@@ -15,7 +16,8 @@ class Signup extends Component {
       designation: "",
       password: '',
       formsInvalid: true,
-      showError: true,
+      showError: false,
+      isSignupSuccess:false,
       errors: {
         name: 'Name is Required!',
         email: 'Email is not valid!',
@@ -84,9 +86,12 @@ class Signup extends Component {
         designation: this.state.designation,
         password: this.state.password
       };
-      console.log('SIGNUP FORM : ', paramsObj);
       this.props.onSignup(paramsObj);
     }
+    this.setState({isSignupSuccess:true})
+  }
+  goToLogin = () => {
+    this.props.history.push('/')
   }
   render() {
     return (
@@ -96,44 +101,90 @@ class Signup extends Component {
             <div className={commonStyles.home_top_container}>
               <div className={commonStyles.home_top_section}>
                 <span className={commonStyles.home_top_text}> Already have an account?</span>
-                <button type="button" className={`btn btn-primary-outline ${commonStyles.home_top_action_btn} ${commonStyles.btn_ripple}`}>SIGN IN</button>
+                <button
+                  type="button"
+                  className={`btn btn-primary-outline ${commonStyles.home_top_action_btn} ${commonStyles.btn_ripple}`}
+                  onClick={this.goToLogin}
+                >SIGN IN</button>
               </div>
             </div>
-            <div className={styles.signup_form_container}>
+            {this.state.isSignupSuccess && <div className={styles.signup_form_container}>
               <p className={styles.signup_main_text}>Welcome to Precily_AI</p>
               <p className={styles.signup_sub_text}>Enter details to create your account</p>
               <div className={commonStyles.home_form_section}>
                 <form>
                   <p className={commonStyles.common_form_label}>NAME</p>
-                  <input className={`form-control ${commonStyles.common_form_text_field}`} type="text" name="name" value={this.state.name} onChange={(event) => this.handleUserInput(event)}></input>
+                  <input
+                    className={`form-control ${commonStyles.common_form_text_field}`}
+                    type="text"
+                    name="name"
+                    value={this.state.name}
+                    onChange={(event) => this.handleUserInput(event)}>
+                  </input>
                   {this.state.showError && this.state.errors.name && <ErrorText text={this.state.errors.name} />}
                   <p className={commonStyles.common_form_label}>EMAIL ADDRESS</p>
-                  <input className={commonStyles.common_form_text_field} type="text" name="email" value={this.state.email} onChange={(event) => this.handleUserInput(event)}></input>
+                  <input
+                    className={commonStyles.common_form_text_field}
+                    type="text"
+                    name="email"
+                    value={this.state.email}
+                    onChange={(event) => this.handleUserInput(event)}>
+                  </input>
                   <p className={commonStyles.common_form_label}>COMPANY</p>
-                  <input className={commonStyles.common_form_text_field} type="text" name="company" value={this.state.company} onChange={(event) => this.handleUserInput(event)}></input>
+                  <input
+                    className={commonStyles.common_form_text_field}
+                    type="text"
+                    name="company"
+                    value={this.state.company}
+                    onChange={(event) => this.handleUserInput(event)}>
+                  </input>
                   <p className={commonStyles.common_form_label}>DESIGNATION</p>
-                  <input className={commonStyles.common_form_text_field} type="text" name="designation" value={this.state.designation} onChange={(event) => this.handleUserInput(event)}></input>
+                  <input
+                    className={commonStyles.common_form_text_field}
+                    type="text"
+                    name="designation"
+                    value={this.state.designation}
+                    onChange={(event) => this.handleUserInput(event)}>
+                  </input>
                   <p className={commonStyles.common_form_label}>PASSWORD</p>
-                  <input className={commonStyles.common_form_text_field} type="password" name="password" value={this.state.password} onChange={(event) => this.handleUserInput(event)}></input>
+                  <input
+                    className={commonStyles.common_form_text_field}
+                    type="password"
+                    name="password"
+                    value={this.state.password}
+                    onChange={(event) => this.handleUserInput(event)}>
+                  </input>
                   <div className="form-check">
-                    <input type="checkbox" className={`form-check-input ${styles.signup_checkbox}`} id="tnc"></input>
-                    <label className={styles.singup_tnc} htmlFor="tnc">I agree to Precily's Terms of Service and Privacy Policy</label>
+                    <input
+                      type="checkbox"
+                      className={`form-check-input ${styles.signup_checkbox}`}
+                      id="tnc">
+                    </input>
+                    <label
+                      className={styles.singup_tnc}
+                      htmlFor="tnc">I agree to Precily's Terms of Service and Privacy Policy</label>
                   </div>
                   <div className={styles.signup_form_captcha_container}>
                     <Captcha></Captcha>
                   </div>
                   <div className={styles.signup_form_submit_container}>
-                    <button type="button" className={`btn btn-primary-outline ${commonStyles.common_submit_btn} ${commonStyles.btn_ripple}`} onClick={this.handleFormSubmit}>SIGN UP</button>
+                    <button
+                      type="button"
+                      className={`btn btn-primary-outline ${commonStyles.common_submit_btn} ${commonStyles.btn_ripple}`}
+                      onClick={this.handleFormSubmit}>
+                      SIGN UP
+                      </button>
                   </div>
                 </form>
               </div>
-            </div>
+            </div>}
           </div>
         </div>
+        {!this.state.isSignupSuccess && <SignupSuccess></SignupSuccess>}
+
       </div>
-
-
     )
+    
   }
 
 
