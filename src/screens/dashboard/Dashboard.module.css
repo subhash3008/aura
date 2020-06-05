@@ -1,0 +1,52 @@
+.dashboard_heading{
+    display: flex;
+    justify-content: space-between;
+}
+.button_container{
+    display: flex;
+}
+.dashboard_btn{
+    font-size: 	0.6875em;
+    padding: 8px 14px 8px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    border: 1.5px solid #144192;
+}
+.dashboard_btn:focus{
+    outline: none;
+}
+.sync_btn{ 
+    color: #144192;
+    background: transparent; 
+    margin-right: 12px;
+}
+.upload_doc_btn{
+    color: #ffffff;
+    background: #144192;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.239));
+}
+
+.btn_icon{
+    margin:0px 8px;
+    font-size: 13px;
+}
+.document_count_container{
+    display:flex;
+     justify-content:space-between;
+     margin-top: 30px;
+}
+.reports_recentdoc_container{
+    display:flex;
+     justify-content:space-between;
+     margin-top: 30px;
+}
+.card_body{
+    padding: 0.6rem 0.6rem 1rem 1.2rem;
+}
+.reports_card{
+    width: 56%;
+}
+.recentdoc_card{
+    width: 42%;
+}
+

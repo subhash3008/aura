@@ -36,7 +36,7 @@ class EditProfile extends Component {
                 <div className={`col-md-3 ${styles.profile_pic_section}`}>
                     <div>
                         <label className={styles.profile_pic} >
-                            <img style={{ height: "100%", width: "100%", borderRadius: "50%" }} src="https://www.w3schools.com/howto/img_avatar.png" alt=""></img>
+                            <img style={{ height: "100%", width: "100%", borderRadius: "50%" }} src={this.state.profileImage} alt=""></img>
                         </label>
                         <br />
                         <input className={styles.file_input} id="fileInput" type='file' onChange={(e) => this.onSelectFile(e)}></input>

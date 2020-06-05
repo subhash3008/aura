@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Captcha.module.css";
+// import styles from "./Captcha.module.css";
 
 import ReCAPTCHA from "react-google-recaptcha";
 const recaptchaRef = React.createRef();

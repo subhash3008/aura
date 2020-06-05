@@ -40,7 +40,6 @@ class Homepage extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log('STATE : ', state);
   return { homepage: state.homepage };
 }
 

@@ -31,6 +31,8 @@
 }
 /*********** Button Styling End *************/
 
+/* ************************* Bootstrap no padding no margin styling starts ***************************/
+
 .no_gutter {
 	margin-left: 0;
 	margin-right: 0;
@@ -40,7 +42,9 @@
 	padding-left: 0;
 	padding-right: 0;
 }
+/* ************************* Bootstrap no padding no margin styling end ***************************/
 
+/* ************************* Home page common styling starts ***************************/
 .home_top_action_btn {
 	font-size: 10px;
 	color: #144192;
@@ -67,21 +71,26 @@
 	color: #144192;
 	font-weight: 500;
 }
+
+/* ************************* Home page common styling end ***************************/
+
+/* ************************* Form common styling starts ***************************/
 .common_form_text_field {
 	width: 100%;
 	border: 1.5px solid lightgray;
 	border-radius: 6px;
-	padding: 8px 12px;
+	padding: 7px 12px;
 	/* margin-bottom: 12px; */
 }
 .home_form_section {
 	width: 55%;
 }
 .common_form_label {
-	font-size: 0.85em;
+	font-size: 0.6785em;
 	margin-bottom: 8px;
-	display: inline-block;
-	margin-top: 12px;
+	margin-top: 16px;
+	font-weight: 500;
+	color: #BDBEC5;
 }
 .common_submit_container {
 	text-align: center;
@@ -99,3 +108,36 @@
 .common_submit_btn:hover {
 	color: #ffffff !important;
 }
+/************************** Form common styling end ***************************/
+
+/**************************common css for screens starts**************************/
+
+.commom_wrapper {
+	margin-left: 110px;
+	margin-top: 95px;
+	margin-right: 60px;
+}
+.commom_title {
+	font-size: 1.8em;
+	font-weight: bold;
+	color: #144192;
+}
+.commom_subtitle {
+	color: lightgray;
+	font-size: 0.7em;
+	font-weight: 500;
+	line-height: 0.9;
+}
+.common_header_margin{
+	margin-top: 62.5px;
+}
+
+/* *************************common css for screens end************************* */
+
+/* ******************************common card starts****************************************** */
+.card_layout {
+    filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.129));
+    border-radius: 8px;
+}
+
+/* ******************************common card end****************************************** */

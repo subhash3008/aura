@@ -108,7 +108,7 @@ class Signup extends Component {
                 >SIGN IN</button>
               </div>
             </div>
-            {this.state.isSignupSuccess && <div className={styles.signup_form_container}>
+            {!this.state.isSignupSuccess && <div className={styles.signup_form_container}>
               <p className={styles.signup_main_text}>Welcome to Precily_AI</p>
               <p className={styles.signup_sub_text}>Enter details to create your account</p>
               <div className={commonStyles.home_form_section}>
@@ -180,7 +180,7 @@ class Signup extends Component {
             </div>}
           </div>
         </div>
-        {!this.state.isSignupSuccess && <SignupSuccess></SignupSuccess>}
+        {this.state.isSignupSuccess && <SignupSuccess></SignupSuccess>}
 
       </div>
     )

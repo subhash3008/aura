@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import styles from "./Login.module.css";
 import commonStyles from '../../../shared/Common.module.css';
 import Captcha from '../../../shared/captcha/Captcha';
-import history from '../../../history.js'
 
 
 class Login extends Component {
@@ -17,7 +16,6 @@ class Login extends Component {
   handleUserInput = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    console.log(name)
     this.setState({ [name]: value });
   }
 

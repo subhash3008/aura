@@ -20,7 +20,6 @@ class AccountSettings extends Component {
   handleUserInput = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    console.log(name)
     this.setState({ [name]: value });
   }
 

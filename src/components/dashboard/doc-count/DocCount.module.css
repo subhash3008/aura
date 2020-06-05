@@ -1,0 +1,31 @@
+.doc_count_card_container {
+    width: 22%;
+}
+
+.doc_count_card_body {
+    text-align: left;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    line-height: 2.7;
+    text-align: center;
+    background: #f5f7fd;
+    color: #144192;
+    float: left;
+    margin-left: 28px;
+    margin-right: 24px;
+}
+.doc_count {
+    font-size: 1.375em;
+    font-weight: 500;
+}
+.doc_title {
+    font-size: 0.6875em;
+    color: rgba(55, 59, 83, 1);
+}

@@ -1,0 +1,22 @@
+
+
+.upload_document_container{
+    text-align: center;
+
+}
+.upload_document_text{
+
+}
+.upload_document_text{
+    font-size: 1.5em;
+     font-weight: 500;
+      margin-top: 28px;
+       margin-bottom: 0px;
+}
+.upload_document_format_text{
+    font-size: 12px;
+}
+.upload_document_submit_section{
+text-align: center;
+margin-top: 40px;
+}

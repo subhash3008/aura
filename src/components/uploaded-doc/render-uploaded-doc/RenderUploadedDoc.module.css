@@ -1,0 +1,18 @@
+.doc_control_section {
+    margin-bottom: 3em;
+    padding: 1.2em 1em;
+    background-color: #d3dbf8;
+    color: #708bc3;
+    font-weight: 500;
+    font-size: 13px;
+    position: fixed;
+    height: 51px;
+    width: 74%;
+    z-index: 2;
+}
+.icon_style{
+    padding-right:1em; 
+    cursor:pointer;
+    font-size: larger;
+    margin-top: 2px;
+}

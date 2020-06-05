@@ -11,6 +11,7 @@
   background-color: rgba(19, 206, 102, 0.039);
   margin-bottom: 90px;
   margin-right: 120px;
+  border-radius: 4px;
 }
 .success_tick_container {
   text-align: center;
