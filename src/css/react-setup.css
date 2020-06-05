@@ -45,29 +45,30 @@ body {
   }
   .pg-viewer-wrapper .pg-viewer {
   
-    margin-top: 52px;
+    margin-top: 82px;
 }
 /* -----------------------react-file-viewer end----------------- */
 
+/* ****************************custom scrollbar start******************************************* */
 
-
-/* total width */
-.yyy ::-webkit-scrollbar {
+.thin_custom_scrollbar ::-webkit-scrollbar {
     background-color:#fff;
     width:12px
   }
-  
-  /* background of the scrollbar except button or resizer */
-  .yyy ::-webkit-scrollbar-track {
+  .thin_custom_scrollbar ::-webkit-scrollbar-track {
     background-color:#fff
   }
-  
-  /* scrollbar itself */
-  .yyy ::-webkit-scrollbar-thumb {
+  .thin_custom_scrollbar ::-webkit-scrollbar-thumb {
     background-color:#C1C1C1;
     border-radius:16px;
     border:4px solid #fff
   }
-  
-  /* set button(top and bottom of the scrollbar) */
-  .yyy ::-webkit-scrollbar-button {display:none}
+  .thin_custom_scrollbar ::-webkit-scrollbar-button {display:none}
+
+  /* ****************************custom scrollbar end******************************************* */
+
+  .document_type_radio_group .form-check{
+      padding-bottom: 6px;
+      font-size: 13px
+
+  }

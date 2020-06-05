@@ -1,0 +1,35 @@
+
+
+.doc_preview_title{
+    border-bottom: 1px solid #BDBEC5;
+    padding: 12px 20px;
+    font-weight: bold;
+}
+.doc_preview_container{
+    height: 80vh;
+    background-color: #ffffff;
+     overflow: auto;
+}
+.doc_preview_form_container{
+    padding: 0px 20px;
+
+}
+.doc_preview_two_column_fields{
+    display: flex;
+     justify-content: space-between;
+}
+.doc_preview_two_column_fields_width{
+    width: 48%;
+}
+.doc_preview_last_field_bottom_spacing{
+    margin-bottom: 20px;
+
+}
+.doc_prevew_form_submit_container{
+    margin: 4px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 11vh;
+    
+}

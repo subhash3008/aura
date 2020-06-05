@@ -18,7 +18,7 @@ class RenderUploadedDoc extends Component {
                 </div>
                 <FileViewer
                     fileType='docx'
-                    filePath="https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/auradoc/vdr/windrose/1.%20Windrose_SCN_AY%2012-13.docx"
+                    filePath="https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/auradoc/vdr/MAT/1.%20Notice.docx"
                     onError={this.onError} />
 
             </div>

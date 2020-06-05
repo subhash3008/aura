@@ -95,6 +95,21 @@
 .common_submit_container {
 	text-align: center;
 }
+
+.common_light_btn{
+	background-color: #ffffff;
+	font-size: 10px;
+	color: #144192;
+	font-weight: 600;
+	font-size: 12px;
+	box-shadow: none !important;
+	border-radius: 4px;
+	padding: 12px 50px;
+	border:1.5px solid #144192
+}
+.common_light_btn:hover {
+	color: #144192 !important;
+}
 .common_submit_btn {
 	background-color: #144192;
 	font-size: 10px;

@@ -28,7 +28,7 @@ class Dashboard extends Component {
     return (
       <div>
         <NavigationBar></NavigationBar>
-        <Sidebar></Sidebar>
+        {/* <Sidebar></Sidebar> */}
         <div className={commonStyles.commom_wrapper}>
           <div className={styles.dashboard_heading}>
             <div>
@@ -52,7 +52,7 @@ class Dashboard extends Component {
             </div>
           </div>
 
-          <div className={styles.document_count_container}>
+          {/* <div className={styles.document_count_container}>
             {
               sample.map(record => {
                 return (
@@ -60,9 +60,9 @@ class Dashboard extends Component {
                 )
               })
             }
-          </div>
+          </div>  */}
 
-          <div className={styles.reports_recentdoc_container}>
+           {/* <div className={styles.reports_recentdoc_container}>
             <div className={`card ${commonStyles.card_layout} ${styles.reports_card}`}>
               <div className={`card-body ${styles.card_body}`}>
                 <ReportsGraph></ReportsGraph>
@@ -73,9 +73,9 @@ class Dashboard extends Component {
                 <RecentDoc></RecentDoc>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          {this.state.documenUploadBtnClicked && <UploadDoc></UploadDoc>}
+          {this.state.documenUploadBtnClicked && <UploadDoc history={this.props.history}></UploadDoc>}
         </div>
       </div>
     )

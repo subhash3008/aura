@@ -13,6 +13,7 @@ class UploadDoc extends Component {
 
     uploadDocument = () => {
     }
+
     onfileFound = (file) => {
         this.setState({ showResults: false })
         file.forEach((file) => {
@@ -26,6 +27,7 @@ class UploadDoc extends Component {
 
                 }, function () {
                     // this.onUpload()
+                    this.props.history.push('uploaded-doc')
                 })
             }
             reader.readAsDataURL(file)
